@@ -3,11 +3,9 @@ layout: default
 ---
 Forthcoming Link to Bruno's sterilized CV/Resume
 
-[Return to Bruno's Homepage (not Github)](https://itsbruno.xyz)
-
-[Check out Bruno's Security Blog and Podcast](https://themoloch.com)
-
-[Check out Bruno's Weird Fiction Project](https://enacz.neocities.org/)
+[Bruno's Homepage (not Github)](https://itsbruno.xyz)
+[Bruno's Security Blog and Podcast](https://themoloch.com)
+[Bruno's Weird Fiction Project](https://enacz.neocities.org/)
 
 ## Why does this page exist!?
 
