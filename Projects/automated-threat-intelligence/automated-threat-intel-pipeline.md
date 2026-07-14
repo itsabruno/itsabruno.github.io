@@ -2,7 +2,6 @@
 layout: default
 title: Automated Threat Intelligence Briefing Pipeline
 ---
-
 # Automated Threat Intelligence Briefing Pipeline
 
 *A self-hosted, fully unattended daily threat intel digest — MISP, a locally-hosted LLM, and systemd, wired together end to end.*
@@ -35,9 +34,8 @@ This project automates a task every SOC does manually: pulling the day's new thr
 
 ## Sample Output
 
-![[Pasted image 20260714194055.png]]
-![[Pasted image 20260714194126.png]]
-![[Pasted image 20260714194145.png]]
+![Sample brief — narrative events table](/Assets/Images/automated-threat-intel/sample-brief-1.png)
+![Sample brief — key takeaways and indicator distribution](/Assets/Images/automated-threat-intel/sample-brief-2.png) ![Sample brief — bulk feed activity table](/Assets/Images/automated-threat-intel/sample-brief-3.png)
 ## Technical Challenges & Debugging
 
 The build surfaced several real problems worth documenting on their own — this is where most of the actual learning happened.
@@ -45,7 +43,7 @@ The build surfaced several real problems worth documenting on their own — this
 ### Feeds that looked healthy but weren't feeding anything
 
 Early testing consistently returned zero events despite MISP showing active feeds. The root cause: MISP distinguishes between **caching** a feed (downloading it for correlation only) and **fetching** it (actually creating queryable local events) — and a feed can show recent cache activity while never having created a single event. Fixed by explicitly triggering `/feeds/fetchFromAllFeeds` before every pull, rather than trusting that "enabled" meant "flowing in."
-![[Pasted image 20260714182316.png]]
+![](misp-feeds.png)
 ### Wrong API filter, misleading empty result
 
 A related dead end: filtering by `date_from` returned nothing, because that field filters on an event's *content* date (when the underlying report was published), not when it landed in my instance — feed-ingested events routinely carry dates from weeks or months prior. Switched to the `timestamp` field, which reflects last-modified time, giving the actual "what's new since yesterday" semantics I needed.
@@ -79,10 +77,7 @@ First live test showed every log line arriving in a single burst at the very end
 `MISP` · `PyMISP` · `Python` · `Ollama` · `gpt-oss:20b` · `systemd` · `Obsidian`
 
 ### Scheduling & Automation Proof
-
-![[Screenshot_20260714_193540.png]]
+![](list-timers.png)
 
 ### Live `journalctl -f` output during a real run
-![[Pasted image 20260714195347.png]]
-![[Pasted image 20260714195518.png]]
-![[Pasted image 20260714195443.png]]
+![journalctl — MISP startup and readiness wait](/Assets/Images/automated-threat-intel/pipeline-log-1.png) ![journalctl — feed fetch, pull, and brief write](/Assets/Images/automated-threat-intel/pipeline-log-2.png) ![journalctl — MISP container teardown](/Assets/Images/automated-threat-intel/pipeline-log-3.png)

@@ -1,5 +1,6 @@
 ---
 layout: default
+image-counter: 0
 ---
 [Bruno's Homepage (not Github)](https://itsbruno.xyz)
 ## Why does this page exist!?
