@@ -43,7 +43,7 @@ The build surfaced several real problems worth documenting on their own — this
 ### Feeds that looked healthy but weren't feeding anything
 
 Early testing consistently returned zero events despite MISP showing active feeds. The root cause: MISP distinguishes between **caching** a feed (downloading it for correlation only) and **fetching** it (actually creating queryable local events) — and a feed can show recent cache activity while never having created a single event. Fixed by explicitly triggering `/feeds/fetchFromAllFeeds` before every pull, rather than trusting that "enabled" meant "flowing in."
-![](misp-feeds.png)
+![MISP enabled feeds showing caching vs. fetching status](/Assets/Images/automated-threat-intel/misp-feeds.png)
 ### Wrong API filter, misleading empty result
 
 A related dead end: filtering by `date_from` returned nothing, because that field filters on an event's *content* date (when the underlying report was published), not when it landed in my instance — feed-ingested events routinely carry dates from weeks or months prior. Switched to the `timestamp` field, which reflects last-modified time, giving the actual "what's new since yesterday" semantics I needed.
