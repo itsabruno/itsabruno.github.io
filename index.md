@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+---
+layout: default
+---
 [Bruno's Homepage (not Github)](https://itsbruno.xyz)
 ## Why does this page exist!?
 
@@ -12,6 +15,7 @@ This necessitates him building a Github portfolio to show that he kind of knows 
 ## Projects
 
 - [Home SIEM Honeypot Investigation](https://github.com/itsabruno/itsabruno.github.io/blob/a9128e463370846f4bf4bc519a6dba920217d37d/Projects/home-siem-honeypot/13.7.26%20Automated%20SSH%20Credential-Testing.md) — end-to-end investigation of real attacker traffic captured by a self-hosted Cowrie honeypot, correlated through Wazuh, TheHive, and MISP.
+- [Automated Threat Intelligence Briefing Pipeline](https://github.com/itsabruno/itsabruno.github.io/blob/main/Projects/automated-threat-intelligence/automated-threat-intel-pipeline.md) — a fully unattended daily threat intel digest built on MISP, a locally-hosted LLM (gpt-oss:20b via Ollama), and systemd, from ingestion through summarization to a scheduled write.
 
 ## What's Coming
 
