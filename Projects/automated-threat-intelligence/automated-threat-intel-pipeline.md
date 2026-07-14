@@ -76,8 +76,10 @@ First live test showed every log line arriving in a single burst at the very end
 
 `MISP` · `PyMISP` · `Python` · `Ollama` · `gpt-oss:20b` · `systemd` · `Obsidian`
 
+
 ### Scheduling & Automation Proof
-![](list-timers.png)
+
+![systemctl --user list-timers showing the scheduled run](/Assets/Images/automated-threat-intel/list-timers.png)
 
 ### Live `journalctl -f` output during a real run
 ![journalctl — MISP startup and readiness wait](/Assets/Images/automated-threat-intel/pipeline-log-1.png) ![journalctl — feed fetch, pull, and brief write](/Assets/Images/automated-threat-intel/pipeline-log-2.png) ![journalctl — MISP container teardown](/Assets/Images/automated-threat-intel/pipeline-log-3.png)
