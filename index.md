@@ -1,22 +1,13 @@
 ---
 layout: default
 ---
-
-[Bruno's CV/Resume](https://itsbruno.xyz/index.php/resume-cv/)
-
 [Bruno's Homepage (not Github)](https://itsbruno.xyz)
-
-[Bruno's Security Blog and Podcast](https://themoloch.com)
-
-[Bruno's Weird Fiction Project](https://enacz.neocities.org/)
-
-
-
 ## Why does this page exist!?
 
 **Mark is trying to get a day job in cybersecurity!**
 
 This necessitates him building a Github portfolio to show that he kind of knows what he's doing!
+[Bruno's CV/Resume](https://itsbruno.xyz/index.php/resume-cv/)
 
 ## Projects
 
@@ -30,12 +21,6 @@ This necessitates him building a Github portfolio to show that he kind of knows 
 - GRC toolkit (ISO 27001 templates, NIS2 checklists)
 
 ## In the Meantime
+Head back to my [homepage](https://itsbruno.xyz) to see some of my other publications!
 [The Moloch](https://themoloch.com) has my publicly available threat intel analysis (as well as some spicy opinion pieces).
-
-
-Currently working toward:
-- ISACA CISM
-- CompTIA SecurityX
-- EC-Council CCSE
-- EC-Council CASE
-- HTB CDSA
+[Bruno's Weird Fiction Project](https://enacz.neocities.org/) This will be launching in late 2026/early 2027.
