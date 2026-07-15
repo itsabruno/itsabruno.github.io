@@ -9,7 +9,7 @@ title: Automated Threat Intelligence Briefing Pipeline
 
 This project automates a task every SOC does manually: pulling the day's new threat intelligence, filtering the signal from the noise, and writing a readable summary. The pipeline runs once daily with zero manual intervention. It starts my self-hosted MISP instance if it isn't already running, pulls newly modified threat intel events, separates analysis from raw bulk indicator dumps, hands the analysis-worthy content to a locally-hosted LLM for summarization, writes a dated markdown brief into my notes vault, and shuts MISP back down if it was the one that started it. It's scheduled via a systemd timer rather than cron, so a missed run (machine off at the scheduled time) is caught automatically on next login.
 
-*I'm going to be honest, this one was far beyond my personal scripting abilities, so I will publicly disclose that this one was **vibe coded**. Because of this, I do not recommend deploying this outside of a local instance until I can scrutinize the code in more detail. I will make the scripts available on request, I just need to sanitize them.* 
+*I will publicly disclose that this one was, in part, **vibe coded**. Because of this, I do not recommend deploying this outside of a local instance until I can scrutinize the code in more detail. I will make the scripts available on request, I just need to sanitize them.*
 
 *Also relevant when running these scripts and this architecture: this was accomplished on a modestly powerful gaming desktop, running a Fedora Linux distribution with KDE Plasma as its desktop environment. AMD CPU and GPU.*
 
