@@ -299,6 +299,6 @@ A plausible (not confirmed) explanation: `gpt-oss` may have received more target
 
 ## References
 
-- OWASP Top 10 for LLM Applications (2025): https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf
-- NVIDIA Garak: https://github.com/NVIDIA/garak
-- PromptInject framework (Perez & Ribeiro, NeurIPS ML Safety Workshop 2022): https://openreview.net/forum?id=qiaRo_7Zmug
+- [OWASP Top 10 for LLM Applications (2025)](https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf)
+- [NVIDIA Garak](https://github.com/NVIDIA/garak)
+- [PromptInject framework (Perez & Ribeiro, NeurIPS ML Safety Workshop 2022)](https://openreview.net/forum?id=qiaRo_7Zmug)
