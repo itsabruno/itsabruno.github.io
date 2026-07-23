@@ -118,6 +118,7 @@ Documenting both steps regardless of outcome — a rule that resists the naive a
 | ------------- | ------ | ------- | ------------------- | ---------------- |
 | `qwen3:8b`    | 20/256 | 236/256 | 92.19%              | [88.67%, 95.31%] |
 | `gpt-oss:20b` | 21/256 | 235/256 | 91.80%              | [88.28%, 94.92%] |
+
 #### Example Outputs: Hijacked vs. Resisted
 
 The 92% figure represents hundreds of individual attempts across unrelated task framings, the injected string surfaces, regardless of what the user actually appeared to be asking for:
